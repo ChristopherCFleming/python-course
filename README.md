@@ -1,8 +1,4 @@
-# Python Course for Beginners
-
-Welcome to the supporting doc's to my 'Python Course For Beginners'
-
-![Python course for beginners](https://static.didcoding.com/media/tutorials/Python_course.jpg "Python Course For Beginners")
+# Python Course
 
 Fell free to use this repo as a 'cheat sheet'
 
