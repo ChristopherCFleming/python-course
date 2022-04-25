@@ -19,7 +19,7 @@ class ClassName:
     <statement-N>
 
 Class definitions, like function definitions (def statements) must be executed 
-before they have any effect. Hurray!
+before they have any effect.
 '''
 
 # basics
