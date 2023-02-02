@@ -1,4 +1,4 @@
-#Python control flows - Match statement
+# Python control flows - Match statement
 
 '''
 Hot off the press in Python 3.10
@@ -17,7 +17,10 @@ Note: We have a class in this demo. Don't get too caught up in how it
 works! We have a class video in this course :)
 '''
 
-#basics
+# basics
+from dataclasses import dataclass
+
+
 def http_error(status):
     match status:
         case 400:
@@ -29,6 +32,7 @@ def http_error(status):
         case _:
             return "Something's wrong with the internet"
 
+
 def http_error(status):
     match status:
         case 400 | 401 | 403 | 404:
@@ -39,14 +43,15 @@ def http_error(status):
             return "Something's wrong with the internet"
 
 
-#Patterns can look like unpacking assignments, and can be used to bind variables:
+# Patterns can look like unpacking assignments, and can be used to bind variables:
 # point is an (x, y) tuple
 def http_error(point):
     match point:
         case (0, 0):
             print("Origin")
         case (0, y):
-            print(f"Y={y}")
+            test = y
+            print(test)
         case (x, 0):
             print(f"X={x}")
         case (x, y):
@@ -54,19 +59,21 @@ def http_error(point):
         case _:
             raise ValueError("Not a point")
 
-point_tuple = (0,0)
-point_tuple = (0,123)
-point_tuple = (123,0)
-point_tuple = (123,456)
+
+point_tuple = (0, 0)
+point_tuple = (0, 123)
+point_tuple = (123, 0)
+point_tuple = (123, 456)
 
 
+# Match class
 
-#Match class
-from dataclasses import dataclass
+
 @dataclass
 class Point:
     x: int
     y: int
+
 
 def where_is(point):
     match point:
@@ -80,6 +87,7 @@ def where_is(point):
             print("Somewhere else")
         case _:
             print("Not a point")
+
 
 where_is(Point(0, 0))
 where_is(Point(0, 10))
